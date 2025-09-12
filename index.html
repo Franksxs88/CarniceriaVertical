@@ -29,12 +29,18 @@
             height: 100%;
             border: none;
         }
+        
+        /* Oculta elementos de Google */
+        .gdocs-frame, .punch-viewer-header, .punch-viewer-footer {
+            display: none !important;
+            visibility: hidden !important;
+        }
     </style>
 </head>
 <body>
     <div class="rotate-container">
         <iframe 
-            src="https://docs.google.com/presentation/d/e/2PACX-1vSzR-ng7gJpwL5oWrml7Hg-FkENmYXIsTaMhm3pIHZHtQYUHloSo7b-GLs2FfFCHiTyWMiNutFWLGt8/embed?start=true&loop=true&delayms=30000"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSzR-ng7gJpwL5oWrml7Hg-FkENmYXIsTaMhm3pIHZHtQYUHloSo7b-GLs2FfFCHiTyWMiNutFWLGt8/embed?start=true&loop=true&delayms=30000&rm=minimal&showinfo=0"
             frameborder="0"
             allowfullscreen="true">
         </iframe>
