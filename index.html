@@ -2,20 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Precios Carnicería - Vertical</title>
+    <title>Precios Verticales</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: #000000;
+            background: #000;
             width: 100%;
             height: 100%;
-            font-family: Arial, sans-serif;
         }
         
-        .rotate-container {
-            transform: rotate(-90deg) scale(0.9);
+        .container {
+            transform: rotate(-90deg) scale(1.2);
             transform-origin: center center;
             width: 100vh;
             height: 100vw;
@@ -29,71 +28,16 @@
             width: 100%;
             height: 100%;
             border: none;
-            background: #000000;
-        }
-        
-        #fullscreen-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 10000;
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        
-        #fullscreen-btn:hover {
-            background: #0056b3;
         }
     </style>
 </head>
 <body>
-    <button id="fullscreen-btn" onclick="openFullscreen()">▶ Pantalla Completa</button>
-    
-    <div class="rotate-container">
+    <div class="container">
         <iframe 
             src="https://docs.google.com/presentation/d/e/2PACX-1vSzR-ng7gJpwL5oWrml7Hg-FkENmYXIsTaMhm3pIHZHtQYUHloSo7b-GLs2FfFCHiTyWMiNutFWLGt8/embed?start=true&loop=true&delayms=30000"
             frameborder="0"
-            allowfullscreen="true"
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true">
+            allowfullscreen="true">
         </iframe>
     </div>
-
-    <script>
-    function openFullscreen() {
-        const elem = document.documentElement;
-        
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen().catch(err => {
-                console.log('Error pantalla completa:', err);
-            });
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-        
-        // Ocultar botón después de click
-        document.getElementById('fullscreen-btn').style.display = 'none';
-    }
-    
-    // Intentar pantalla completa automáticamente después de 3 segundos
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            openFullscreen();
-        }, 3000);
-    });
-    
-    // También permitir pantalla completa con click en cualquier lugar
-    document.addEventListener('click', function() {
-        openFullscreen();
-    });
-    </script>
 </body>
 </html>
